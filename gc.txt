@@ -1,0 +1,45 @@
+GIT commands
+
+git init    -- to make git repository
+git add <filename> -- makes the file go into the staging area
+git commit -m "any comment" -- puts it into GIT repository for version tracking
+
+git branch dev -- creates a branch dev
+git checkout dev -- goes to dev branch
+git branch subdev
+git checkout subdev
+
+
+How to merge branches
+-----------------------
+git merge subdev    -- puts all the files in subdev into dev
+
+
+How not to track files
+--------------------------
+$ vi .gitignore    -- all files put in here will not be tracked
+
+
+
+Commands 
+
+Description
+
+git add <file>	Adds a specific file to the staging area.
+git add . or git add –all	Adds all modified and new files to the staging area.
+git status	Shows the current state of your repository, including tracked and untracked files, modified files, and branch information.
+git status –ignored	Displays ignored files in addition to the regular status output.
+git diff	Shows the changes between the working directory and the staging area (index).
+git diff <commit1> <commit2>	Displays the differences between two commits.
+git diff –staged or git diff –cached	Displays the changes between the staging area (index) and the last commit.
+git diff HEAD	Display the difference between the current directory and the last commit
+git commit	Creates a new commit with the changes in the staging area and opens the default text editor for adding a commit message.
+git commit -m “<message>” or git commit –message “<message>”	Creates a new commit with the changes in the staging area and specifies the commit message inline.
+git commit -a or git commit –all	Commits all modified and deleted files in the repository without explicitly using git add to stage the changes.
+git notes add	Creates a new note and associates it with an object (commit, tag, etc.).
+git restore <file>	Restores the file in the working directory to its state in the last commit.
+git reset <commit>	Moves the branch pointer to a specified commit, resetting the staging area and the working directory to match the specified commit.
+git reset –soft <commit>	Moves the branch pointer to a specified commit, preserving the changes in the staging area and the working directory.
+git reset –hard <commit>	Moves the branch pointer to a specified commit, discarding all changes in the staging area and the working directory, effectively resetting the repository to the specified commit.
+git rm <file>	Removes a file from both the working directory and the repository, staging the deletion.
+git mv	Moves or renames a file or directory in your Git repository.
